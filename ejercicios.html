@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src ="./ejercicios.js"></script>
+    <!-- async -> cargue primero  su html y luego ejecute el hatml-->
+    <script async src ="./dom.js"></script>
+    <title> Ejercicios JS </title>
+</head>
+<body>
+    <h1>  EJERCICIOS LÓGICA DE PROGRAMACIÓN </h1>
+    <H3> ESTRUCTURAS DE CONTROL DE FLUJO</H3>
+       <ul> 
+         <li> Secuencias </li>
+         <li> Condicionales </li>
+         <li> Ciclos</li>
+       </uL>
+
+       <section> 
+        <h3> EJERCICIOS DE MANIPULACIÓN DEL DOM CO JS </h3>
+        <P>7. Hacer un programa que reciba un nombre por parte del usuario, si se recibió nombre por parte del usuario, saludarlo con ese nombre, si no, sólo decir 'Hola, desconocido' con Manejo de DOM </P>
+       <!--  para poner datos de entrada - información que suministra el usuario -->
+        <label for= "name "> Ingrese su name </label>
+        <input type="text" id="name">
+       <!-- vamos a usar el evento onclick -> darclick al boton -->
+        <br>
+        <br>
+
+        <button onclick="saludarUsuario()">saludar" </button>
+
+        <br>
+        <br>
+        <p class= "mostrarSaludo" >  En esta etiqueta saludar </p>
+        <!-- span es una etiqueta con el objetivo de dar estilos css, para mostrar mensajes del js, mensajes cortos, que n o son ni titulos ni parrafos -->
+        <span> </span>
+        </p>
+
+       </section>
+       
+       
+      <!--  EJERCICIO # 4 JS -->
+
+       <section>
+        <title>Solicitar Texto</title>
+    <script>
+        function solicitarTexto() {
+            let texto = "";
+            // Bucle que continúa solicitando texto hasta que el usuario ingrese algo
+            while (texto === "") {
+                texto = prompt("Por favor, ingresa un texto:");
+                // Opcional: Puedes manejar la posibilidad de que el usuario cancele el prompt
+                if (texto === null) {
+                    alert("Operación cancelada por el usuario.");
+                    return; // Sale de la función si el usuario cancela
+                }
+                // Eliminar espacios en blanco para evitar entradas vacías con espacios
+                texto = texto.trim();
+            }
+            alert("Gracias por ingresar: " + texto);
+        }
+    </script>
+<!--  EJERCICIO # 6 JS --> 
+
+<section> 
+        
+  <h1>Calculadora de Suma y Resta</h1>
+  <div>
+      <label for="numero1">Primer Número:</label>
+      <input type="number" id="numero1" placeholder="Ingresa el primer número">
+  </div>
+  <div>
+      <label for="numero2">Segundo Número:</label>
+      <input type="number" id="numero2" placeholder="Ingresa el segundo número">
+  </div>
+  <button id="calcularBtn">Calcular</button>
+
+  <h2>Resultados:</h2>
+  <p id="suma">Suma: </p>
+  <p id="resta">Resta: </p>
+
+  <script src="script.js"></script>
+
+</section>
+
+
+
+
+</head>
+<body>
+    <h1>Programa para Solicitar Texto</h1>
+    <button onclick="solicitarTexto()">Ingresar Texto</button>
+</body>
+       </section>
+    
+</body>
+</html>
